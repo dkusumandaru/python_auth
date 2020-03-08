@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><span class="fa fa-book"></span> Perpustakaan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        </li>
+        {% if session['userLogAccess'] %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="/books">Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories">Category</a>
+          </li>
+        {% endif %}
+
+      </ul>
+      {% if session['userLogAccess'] %}
+            <ul class="navbar-nav px-3">
+              <li class="nav-item text-nowrap">
+                <a class="nav-link" href="/logout">Sign out</a>
+              </li>
+            </ul>
+      {% endif %}
+
+    </div>
+    <div>
+
+
+
+      
+    </div>
+  </nav>

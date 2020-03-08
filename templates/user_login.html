@@ -1,0 +1,38 @@
+{%	extends	'index.html' %}
+{%	block title %} Login {%	endblock %}
+{%	block body	%}
+
+	
+	<div id="bodyBox" class="container">
+		<div id="centerBox">
+			<div class="panel card">
+				<div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+
+				<div><h1><span class="fa fa-user"></span> Login</h1></div>
+				<hr>
+
+					<form action="{{ url_for('auth') }}" method="POST">
+
+						<div class="form-group">
+							<label><b>Id.User</b></label>
+							<input type="text" class="form-control" name="username">
+						</div>
+
+						<div class="form-group">
+							<label><b>Password</b></label>
+							<input type="password" class="form-control" name="password">
+						</div>
+
+						<div class="form-group">
+							<center>
+							<button	class="btn	btn-success" type="submit">Login</button>
+							</center>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{%	endblock %}
